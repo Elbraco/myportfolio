@@ -1,0 +1,140 @@
+// MEDIA SCREEN MAX  768PX
+//MENU
+@media screen and (max-width: 768px) {
+   
+
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2.5rem 0 0;
+        text-align: center;
+        background-color: $body-color;
+        transition: .4s;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+        border-radius: 2rem;
+        z-index: 100 ;
+        
+}
+}
+
+@media screen and (min-width: 665px) {
+     
+
+    .parcours {
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+    
+        }
+
+        &__box {
+            position: relative;
+            padding-left: 2.5rem;
+            border-left: 1px solid $textColor;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 1.3rem;
+                left: -1rem;
+                height: 2rem;
+                width: 2rem;
+                background-color: $textColor;
+                border-radius: 5rem;
+            }
+        }
+
+    }
+
+    .projet {
+
+        &__controls {
+            text-align: center;
+        }
+
+        &__buttons {
+            display: inline-block;
+            width: 7rem;
+        }
+
+        &__filter-content {
+            width: 250px;
+        }
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+    
+   
+}
+
+
+// MEDIA SCREEN MIN  768PX  XXX TABLETTE XXX
+@media screen and (min-width: 768px) {
+   
+    
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding-top: 7rem;
+    }
+
+    .nav {
+        height: 4rem;
+
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+
+        &__li {
+            margin-left: 2rem;
+            margin-bottom: 0;
+        }
+
+        &__toggle {
+            display: none;
+        }
+
+    }
+
+    
+
+   
+}
+
+// DESKTOP
+
+@media screen and (min-width: 968px) {
+  
+   
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projet {
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+    }
+
+    
+    
+
+
+}
+
+
+
