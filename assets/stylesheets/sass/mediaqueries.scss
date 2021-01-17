@@ -1,25 +1,5 @@
 // MEDIA SCREEN MAX  768PX
-//MENU
-@media screen and (max-width: 768px) {
-   
 
-    .nav__menu {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        right: 0;
-        width: 90%;
-        margin: 0 auto;
-        padding: 2.5rem 0 0;
-        text-align: center;
-        background-color: $body-color;
-        transition: .4s;
-        box-shadow: 0 0 4px rgba(0, 0, 0, .1);
-        border-radius: 2rem;
-        z-index: 100 ;
-        
-}
-}
 
 @media screen and (min-width: 665px) {
      
@@ -28,7 +8,7 @@
 
         &__container {
             grid-template-columns: repeat(2, 1fr);
-            align-items: center;
+            align-items: flex-start;
     
         }
 
