@@ -5,12 +5,8 @@
      
 
     .parcours {
-
-        &__container {
-            grid-template-columns: repeat(2, 1fr);
-            align-items: flex-start;
-    
-        }
+        max-width: 700px;
+       
 
         &__box {
             position: relative;
@@ -31,26 +27,7 @@
 
     }
 
-    .projet {
-
-        &__controls {
-            text-align: center;
-        }
-
-        &__buttons {
-            display: inline-block;
-            width: 7rem;
-        }
-
-        &__filter-content {
-            width: 250px;
-        }
-
-        &__container {
-            grid-template-columns: repeat(2, 1fr);
-
-        }
-    }
+    
 
     
    
@@ -88,6 +65,14 @@
 
     }
 
+    .projet {
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+           
+        }
+    }
+
     
 
    
@@ -97,24 +82,57 @@
 
 @media screen and (min-width: 968px) {
   
-   
+  
     .bd-container {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .projet {
+    
+.projet {
+
         &__container {
             grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 2rem; 
+            margin-top: 1rem;   
+        }
+
+        &__content {
+            position: relative;
+            overflow: hidden;
+            padding: initial;
+            border-radius: 0;
 
         }
-    }
 
+        &__info {
+            position: absolute;
+            display: block;
+            background-color: rgba(255, 255, 255, .5);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            top: 100%;
+            padding: 1rem;
+
+            transition: .5s ease;
+        }
+    
+       
+    
+    
+        &__text {
+            margin-bottom: 1rem;
+        }
+    
+
+        &__content:hover &__info {
+            top: 0;
+        }
+    }
+    
+    
     
     
 
 
 }
-
-
-

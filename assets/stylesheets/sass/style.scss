@@ -100,6 +100,11 @@ body {
     display: grid;
     gap: 1.5rem;
 }
+.bd-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
 .bg-container {
     background-color: $test;
@@ -113,7 +118,7 @@ body {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
-    transition: 0.3s;
+    transition: .3s;
 
     &:hover {
         background-color: rgb(29, 24, 24);
@@ -121,13 +126,23 @@ body {
 
 }
 
-// .show {
-//     display: block;
-// }
+.link {
+    display: inline-block;
+    color: black;
+    border-bottom: 2px solid black;
+    margin-top: 1rem;
+    padding-bottom: 5px;
+    font-weight: $semibold;
+    transition: .3s;
 
-// .hide {
-//     display: none;
-// }
+    &:hover {
+        color: purple;
+    border-bottom: 2px solid purple;
+
+    }
+}
+
+
 //NAV
 .nav {
     height: 4rem;
@@ -250,9 +265,6 @@ body {
 
 .parcours {
 
-    &__container {
-        gap: initial;
-    }
 
     &__box {
         padding-bottom: 1.5rem;
@@ -287,45 +299,29 @@ body {
 
 .projet {
 
-    &__buttons {
-        // display: inline-block;
-        width: 15rem;
-        border-radius: 2rem;
-        margin: .3rem auto;
-        background-color: #333;
-        color: white;
-        text-align: center;
-        line-height: 4rem;
-        cursor: pointer;
-        transition: .3s;
 
-        &:hover {
-            background-color: rgb(26, 26, 26);
-            box-shadow: 0 .5rem .5rem rgba(51, 51, 51, .3);
-        }
-
-    }
 
     &__container {
-        grid-template-columns: repeat(1, 1fr);
+       
         padding-bottom: 2rem; 
         margin-top: 1rem;   
     }
 
-    &__image {
-        border-radius: 1rem;
-    }
+    // &__image {
+    //     border-radius: 1rem;
+    // }
 
     &__content {
-        // margin: 1rem;
-        border-radius: .5rem;
-        padding: .95rem .75rem .75rem;
-        background-color: white;
-        box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
-        border-radius: 1rem;
+        max-width: 23rem;
+        margin: 0 auto;
+        //  margin: 1rem;
+         padding: .95rem .75rem 1.75rem;
+         background-color: white;
+        //  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+         border-radius: 1rem;
 
         &:hover {
-            box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
+             box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
         }
     }
 
@@ -344,8 +340,12 @@ body {
         transition: .3s;
 
         &:hover {
-            color: rgb(29, 24, 24);
+            color: purple;
         }
+    }
+
+    &__button {
+        float: right;
     }
 
 }
@@ -359,18 +359,49 @@ body {
 //competences
 .competences {
 
-
     &__container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        text-align: center;
+        gap: 1rem;
     }
 
-    &__list {
-        list-style: inside;
+    &__title {
+        font-size: .8rem;
+        font-weight: $semibold;
+    }
+
+    &__img {
+        width: 100px;
+    }
+
+}
+
+
+//profil
+.profil {
+
+    &__figure {
+        max-width: 20rem;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    &__content {
+        margin: 0 auto;
+        line-height: 1.7rem;
+    }
+
+    &__aboutme {
+        color: $textColor;
+    }
+
+    &__link {
+        margin-top: 3rem;
+        text-align: center
     }
 }
 
 @import 'mediaqueries.scss';
-
-
-

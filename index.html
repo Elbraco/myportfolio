@@ -37,48 +37,106 @@
         </nav>
     </header>
 
-    <!-- COMPETENCES WEB -->
-    <section class="competences section bd-container" id="competences">
-        <h2 class="section-title">Mes Compétences</h2>
-        <div class="competences__container bd-grid">
-            <ul>
-                <li class="competences__list">HTML</li>
-                <li class="competences__list">CSS</li>
-                <li class="competences__list">JavaScript</li>
-                <li class="competences__list">SASS</li>
-                <li class="competences__list">Jquery</li>
-            </ul>
-            <ul>
-                <li class="competences__list">Node.Js</li>
-                <li class="competences__list">React.Js</li>
-                <li class="competences__list">PHP</li>
-                <li class="competences__list">MySQL</li>
-                <li class="competences__list">Bootstrap</li>
-                <li class="competences__list">Wordpress</li>
-            </ul>
+    <!-- PROFIL -->
+    <section class=" profil section bd-container bd-flex">
+        <figure class="profil__figure">
+            <img src="assets/img/photo-profil.jpg" alt="" srcset="">
+        </figure>
+        <div class="profil__content" >
+            <h2 class="section-title" >A LITTLE ABOUT BRACO STEVE</h2>
+            <strong class="profil__job">Développeur Intégrateur Web</strong>
+            <p class="profil__aboutme" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestias praesentium deserunt facere vero expedita exercitationem explicabo quod laborum et ipsa eum voluptates incidunt dolor, quis tenetur molestiae voluptatem! Architecto.</p>
+            <p class="profil__aboutme" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-            <ul>
-                <li class="competences__list">GitHub</li>
-                <li class="competences__list">Figma</li>
-                <li class="competences__list">Photoshop</li>
-                <li class="competences__list">Acid Pro</li>
-                
-            </ul>
+        </div>
+        <div class="profil__link">
+            <a href="#" class="button"> Télécharger CV </a>
+
         </div>
 
+    </section>
+
+    
+
+    <!-- COMPETENCES WEB -->
+
+    <section class="competences section bd-container" id="competences">
+        <h2 class="section-title">Mes Compétences</h2>
+    <div class="competences__container">
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/html.png" alt="" srcset="">
+            <figcaption class="competences__title" >HTML</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/css.png" alt="" srcset="">
+            <figcaption class="competences__title" >CSS</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/js.png" alt="" srcset="">
+            <figcaption class="competences__title" >JavaScript</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/jquery.png" alt="" srcset="">
+            <figcaption class="competences__title" >JQuery</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/sass.png" alt="" srcset="">
+            <figcaption class="competences__title" >SASS</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/php.png" alt="" srcset="">
+            <figcaption class="competences__title" >PHP</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/mysql.png" alt="" srcset="">
+            <figcaption class="competences__title" >MySQL</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/bootstrap.png" alt="" srcset="">
+            <figcaption class="competences__title" >Bootstrap</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/wordpress.png" alt="" srcset="">
+            <figcaption class="competences__title" >Wordpress</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/nodejs.png" alt="" srcset="">
+            <figcaption class="competences__title" >Node.Js</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/react.png" alt="" srcset="">
+            <figcaption class="competences__title" >React.Js</figcaption>
+        </figure>
+
+        <figure class="competences__figure" >
+            <img class="competences__img" src="assets/img/Logo/photoshop.png" alt="" srcset="">
+            <figcaption class="competences__title" >Photoshop</figcaption>
+        </figure>
+    </div>
     </section>
 
     <!-- PARCOURS -->
     <section class="parcours section bd-container" id="parcours">
         <h2 class="section-title section-title-black">Mon Parcours</h2>
 
-        <div class="parcours__container bd-grid">
+        <div class="parcours__container">
             <div class="parcours__bloc">
 
                 <div class="parcours__box">
                     <p class="parcours__year">2020</p>
                     <h3 class="parcours__title">Formation développeur intégrateur en réalisation d'applications Web</h3>
                     <p class="parcours__description">Diplôme RNCP de niveau III - <span class="parcours__city"> 3WAcademy PARIS (75) </span> </p>
+                    <p>Formation sur les technologies HTML, CSS, Javascript, PHP, Bootstrap, MySQL, JQuery, Wordpress </p>
                 </div>
 
                 <div class="parcours__box">
@@ -122,55 +180,122 @@
     <section class="projet section bd-container" id="projet">
         <h2 class="section-title section-title-black">Mes Projets</h2>
 
-        <div class="projet__container">
 
-            <ul class="projet__controls">
-                <li class="projet__buttons active" data-filter='all'>All</li>
-                <li class="projet__buttons" data-filter='html'>Javascript</li>
-                <li class="projet__buttons" data-filter='mini-projet'>Mini-Projet</li>
-                <li class="projet__buttons" data-filter='php'>PHP</li>
-                <li class="projet__buttons" data-filter='nodejs'>Node.js</li>
-            </ul>
+
 
             <div class="projet__container bd-grid">
-                <div class="projet__content mini-projet">
-                    <img class="projet__image" src="assets/img/dine-restaurant.jpg">
-                    <h3 class="projet__title">Dine Restaurant</h3>
+
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
                     <span class="projet__category">Html Css Js</span>
                     <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
                         magnam deserunt natus possimus perspiciatis architecto.</p>
-                    <a href="https://dinner-restaurant.vercel.app/" target="_blank" class="button">Visiter le site</a>
-                    <a href="https://github.com/Elbraco/dinner-restaurant" target="_blank" class="projet__link"> <i
-                            class='bx bxl-github'></i></a>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
                 </div>
 
-                <div class="projet__content mini-projet">
+                <div class="projet__content">
                     <img class="projet__image" src="assets/img/clock-app.jpg">
-                    <h3 class="projet__title">Clock Application</h3>
-                    <span class="projet__category">Html Css Js API</span>
-                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
-                        magnam deserunt natus possimus perspiciatis architecto.</p>
-                    <a href="https://clocktimeapp.vercel.app/" target="__blank" class="button">Visiter le site</a>
-                    <a href="https://github.com/Elbraco/clockapp" target="__blank" class="projet__link"> <i
-                            class='bx bxl-github'></i></a>
-
-                </div>
-
-                <div class="projet__content mini-projet">
-                    <img class="projet__image" src="assets/img/dine-restaurant.jpg">
-                    <h3 class="projet__title">Dine Restaurant</h3>
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
                     <span class="projet__category">Html Css Js</span>
                     <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
                         magnam deserunt natus possimus perspiciatis architecto.</p>
-                    <a href="#" class="button">Visiter le site</a>
-                    <a href="#" class="projet__link"> <i class='bx bxl-github'></i></a>
-
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
                 </div>
 
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/dine-restaurant.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+                </div>
 
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+                </div>
+
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+                </div>
+
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+                </div>
+
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+                </div>
+
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+                </div>
+
+                <div class="projet__content">
+                    <img class="projet__image" src="assets/img/cookie.jpg">
+                    <div class="projet__info">
+                    <h3 class="projet__title">Cookie</h3>
+                    <span class="projet__category">Html Css Js</span>
+                    <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
+                        magnam deserunt natus possimus perspiciatis architecto.</p>
+                    <a href="https://cookie-app.vercel.app/" target="__blank" class="link">Visiter le site</a>
+                    <a href="https://github.com/Elbraco/cookie" target="__blank" class="projet__link"> <i class='bx bxl-github'></i></a>
+                </div>
+            </div>
 
             </div>
-        </div>
+            <a href="#" class=" projet__button button">Voir autres projets</a>
+
     </section>
 </main>
     <script src="assets/js/main.js"></script>
