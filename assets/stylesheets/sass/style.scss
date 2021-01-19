@@ -63,7 +63,7 @@ $bold: 700;
 // MARGIN
 
 //TITLE
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: $semibold; 
 }
 
@@ -82,14 +82,23 @@ body {
     padding: 4rem 0 2rem;
 }
 
-.section-title-black {
-    color: $titleColor;
 
-}
 .section-title, .section-title-center {
     font-size: $h2-fontSize;
     text-align: center;
     margin-bottom: 1.5rem;
+}
+.heading-3 {
+    font-size: 1.2rem;
+    margin: .3rem 0;
+    width: 100%;
+
+}
+
+.heading-4 {
+    font-size: 1rem;
+    margin: 1rem 0 .3rem;
+
 }
 
 .bd-container {
@@ -385,27 +394,31 @@ body {
 
 //competences
 .competences {
+    font-weight: 600;
+
+    &__card {
+        margin-bottom: 2rem;
+    }
    
+    &__year {
+        color: $textColor-light;
+        font-weight: initial;
+    }
 
-
-    &__container {
-        display: flex;
-        flex-wrap: wrap;
+    &__container-atouts {
         justify-content: space-between;
-        align-items: baseline;
-        text-align: center;
-        gap: 1rem;
     }
 
-    &__title {
-        font-size: .8rem;
-        font-weight: $semibold;
+    &__atouts {
+        width: 33%;
+        margin-bottom: 2rem;
     }
 
-    &__img {
-        width: 100px;
+    &__li {
+        margin: .5rem 0;
     }
 
+    
 }
 
 
@@ -469,10 +482,7 @@ body {
         max-width: 18rem;
         padding: 3rem 0;
 
-        &__title {
-            font-size: 1.2rem;
-            margin: .3rem 0;
-        }
+        
 
        
     }

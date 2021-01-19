@@ -66,7 +66,7 @@ html {
   box-sizing: inherit;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-weight: 600;
 }
 
@@ -83,14 +83,21 @@ body {
   padding: 4rem 0 2rem;
 }
 
-.section-title-black {
-  color: #161212;
-}
-
 .section-title, .section-title-center {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+.heading-3 {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+  width: 100%;
+}
+
+.heading-4 {
+  font-size: 1rem;
+  margin: 1rem 0 0.3rem;
 }
 
 .bd-container {
@@ -322,20 +329,25 @@ body {
   box-shadow: 0 0.5rem 0.5rem rgba(51, 51, 51, 0.3);
 }
 
-.competences__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  text-align: center;
-  gap: 1rem;
-}
-.competences__title {
-  font-size: 0.8rem;
+.competences {
   font-weight: 600;
 }
-.competences__img {
-  width: 100px;
+.competences__card {
+  margin-bottom: 2rem;
+}
+.competences__year {
+  color: #8f8a8a;
+  font-weight: initial;
+}
+.competences__container-atouts {
+  justify-content: space-between;
+}
+.competences__atouts {
+  width: 33%;
+  margin-bottom: 2rem;
+}
+.competences__li {
+  margin: 0.5rem 0;
 }
 
 .profil {
@@ -385,10 +397,6 @@ body {
   text-align: center;
   max-width: 18rem;
   padding: 3rem 0;
-}
-.services__card__title {
-  font-size: 1.2rem;
-  margin: 0.3rem 0;
 }
 
 @media screen and (min-width: 665px) {
@@ -483,10 +491,6 @@ body {
   }
   .projet__content:hover .projet__info {
     top: 0;
-  }
-
-  .competences__container {
-    gap: 3rem;
   }
 }
 
