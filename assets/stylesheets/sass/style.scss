@@ -480,14 +480,13 @@ body {
     position: relative;
     flex-direction: column;
     align-items: center;
+    background: {
+        image: url('/assets/img/mobile/circle.svg');
+        repeat: no-repeat;
+        position-y: 72% 
+    };
 
-    &::after {
-        content: url('/assets/img/mobile/circle.svg') ;
-        position: absolute;
-        top: 54rem;
-        right: 0;
-        z-index: -1;
-    }
+   
 
     &__picture {
         margin-bottom: 2rem;
