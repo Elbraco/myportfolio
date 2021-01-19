@@ -49,6 +49,14 @@ td:not([align]), th:not([align]) {
   text-align: left;
 }
 
+@font-face {
+  font-family: myfonts;
+  src: local(fontsiphone), url(fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: myiphone;
+  src: local(fontsiphone2), url(fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -67,7 +75,7 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: myiphone;
   font-size: 0.938rem;
 }
 
@@ -80,7 +88,7 @@ body {
 }
 
 .section-title, .section-title-center {
-  font-size: 1.25rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -108,12 +116,12 @@ body {
 .bd-flex {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .bg-container {
   background-color: #111111;
   color: white;
+  padding-bottom: 7rem;
 }
 
 .button {
@@ -121,9 +129,10 @@ body {
   background-color: black;
   color: #fff;
   padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 10rem;
   font-weight: 600;
   transition: 0.3s;
+  letter-spacing: 0.1rem;
 }
 .button:hover {
   background-color: #1d1818;
@@ -156,6 +165,9 @@ body {
   color: #161212;
   font-weight: 600;
 }
+.nav__portfolio {
+  font-size: 0.613rem;
+}
 .nav__portfolio:hover {
   color: #da2535;
 }
@@ -172,6 +184,10 @@ body {
 .nav__toggle {
   font-size: 2rem;
   cursor: pointer;
+}
+.nav__mail {
+  vertical-align: middle;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -211,7 +227,8 @@ body {
 }
 
 .scroll-header {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  background-color: whitesmoke;
 }
 
 .scrolltop {
@@ -241,6 +258,9 @@ body {
   bottom: 1.5rem;
 }
 
+.parcours {
+  transform: translateY(-10px);
+}
 .parcours__box {
   padding-bottom: 1.5rem;
 }
@@ -318,21 +338,57 @@ body {
   width: 100px;
 }
 
-.profil__figure {
-  max-width: 20rem;
+.profil {
+  text-align: center;
+  padding-bottom: initial;
+}
+.profil__img {
+  max-width: 7rem;
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 45%;
+  margin-bottom: 1rem;
+}
+.profil__job {
+  font-size: 2.8rem;
+  margin: 1rem auto;
+  line-height: 3rem;
+  max-width: 20rem;
 }
 .profil__content {
   margin: 0 auto;
   line-height: 1.7rem;
 }
 .profil__aboutme {
-  color: #5b5757;
+  font-weight: 600;
+  line-height: 1.7rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 .profil__link {
   margin-top: 3rem;
   text-align: center;
+}
+
+.services {
+  flex-direction: column;
+  align-items: center;
+}
+.services__picture {
+  margin-bottom: 2rem;
+}
+.services__container {
+  align-items: center;
+  flex-direction: column;
+}
+.services__card {
+  text-align: center;
+  max-width: 18rem;
+  padding: 3rem 0;
+}
+.services__card__title {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
 }
 
 @media screen and (min-width: 665px) {
@@ -345,14 +401,12 @@ body {
     border-left: 1px solid #5b5757;
   }
   .parcours__box::after {
-    content: "";
+    content: url("/assets/img/bxs-graduation.svg");
     position: absolute;
     top: 1.3rem;
-    left: -1rem;
-    height: 2rem;
-    width: 2rem;
-    background-color: #5b5757;
-    border-radius: 5rem;
+    left: -0.8rem;
+    background-color: white;
+    padding-top: 0.3rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -389,6 +443,20 @@ body {
     margin-right: auto;
   }
 
+  .profil {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .profil__figure {
+    width: 48%;
+  }
+  .profil__content {
+    width: 48%;
+  }
+  .profil__link {
+    flex-basis: 100%;
+  }
+
   .projet__container {
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 2rem;
@@ -415,6 +483,10 @@ body {
   }
   .projet__content:hover .projet__info {
     top: 0;
+  }
+
+  .competences__container {
+    gap: 3rem;
   }
 }
 

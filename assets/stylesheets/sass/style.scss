@@ -2,6 +2,18 @@
 @import 'reset.scss';
 @import url("http://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+@font-face {
+    font-family: myfonts;
+    src: local(fontsiphone),
+    url(fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: myiphone;
+    src: local(fontsiphone2),
+    url(fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+
 html {
     box-sizing: border-box;
     // font-size: 62.5%;
@@ -27,9 +39,9 @@ $containerColor: rgba(255, 255, 255, 1);
 $test: rgba(17, 17, 17, 1);
 
 /// FONT TYPO
-$bodyFont: 'Poppins', sans-serif;
-$biggest-fontSize: 2rem;
-$h2-fontSize: 1.25rem;
+$bodyFont: myiphone;
+$biggest-fontSize: 2.8rem;
+$h2-fontSize: 2rem;
 $h3-fontSize: 1.125rem;
 $normal-fontSize: .938rem;
 $small-fontSize: .813rem;
@@ -41,10 +53,11 @@ $bold: 700;
 
 @media screen and (min-width: 968px) {
     $biggest-fontSize: 3rem;
-    $h2-fontSize: 1.75rem;
+    $h2-fontSize: 5rem;
     $h3-fontSize: 1.25rem;
     $normal-fontSize: 1rem;
     $small-fontSize: .875rem;
+    
 }
 
 // MARGIN
@@ -59,7 +72,7 @@ a {
 }
 
 body {
-    font-family: $bodyFont;
+    font-family: myiphone;
     font-size: $normal-fontSize;
     
 }
@@ -103,12 +116,13 @@ body {
 .bd-flex {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    // flex-direction: column;
 }
 
 .bg-container {
     background-color: $test;
     color: white;
+    padding-bottom: 7rem;
 }
 
 .button {
@@ -116,9 +130,11 @@ body {
     background-color: black;
     color: #fff;
     padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 10rem;
     font-weight: 600;
     transition: .3s;
+    letter-spacing: 0.1rem;
+
 
     &:hover {
         background-color: rgb(29, 24, 24);
@@ -158,6 +174,9 @@ body {
         color: $titleColor;
         font-weight: $semibold;
     }
+    &__portfolio {
+        font-size: .613rem;
+    }
 
     &__portfolio:hover {
         color: $firstColor;
@@ -177,6 +196,11 @@ body {
     &__toggle {
     font-size: 2rem;
     cursor: pointer;
+    }
+
+    &__mail {
+    vertical-align: middle;
+    font-size: 1.4rem;
     }
 
 }
@@ -226,7 +250,9 @@ body {
 
 // Change background
 .scroll-header {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .5 );
+    // box-shadow: 0 1px 4px rgba(0, 0, 0, .5 );
+    box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);
+    background-color: whitesmoke;
 }
 
 // SCROLL TOP
@@ -265,6 +291,7 @@ body {
 
 .parcours {
 
+    transform: translateY(-10px);
 
     &__box {
         padding-bottom: 1.5rem;
@@ -358,6 +385,8 @@ body {
 
 //competences
 .competences {
+   
+
 
     &__container {
         display: flex;
@@ -382,11 +411,24 @@ body {
 
 //profil
 .profil {
+    text-align: center;
+    padding-bottom: initial;
 
-    &__figure {
-        max-width: 20rem;
+
+
+    &__img {
+        max-width: 7rem;
         margin: 0 auto;
-        border-radius: 50%;
+        border-radius: 45%;
+        margin-bottom: 1rem;
+    }
+
+    &__job {
+        font-size: $biggest-fontSize;
+        margin: 1rem auto;
+        line-height: 3rem;
+        max-width: 20rem;
+
     }
 
     &__content {
@@ -395,7 +437,11 @@ body {
     }
 
     &__aboutme {
-        color: $textColor;
+        font-weight: 600;
+        line-height: 1.7rem;
+        max-width: 20rem;
+        margin: 0 auto;
+        font-size: 1.2rem;
     }
 
     &__link {
@@ -403,5 +449,44 @@ body {
         text-align: center
     }
 }
+
+// SERVICES
+.services {
+    flex-direction: column;
+    align-items: center;
+
+    &__picture {
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__card {
+        text-align: center;
+        max-width: 18rem;
+        padding: 3rem 0;
+
+        &__title {
+            font-size: 1.2rem;
+            margin: .3rem 0;
+        }
+
+       
+    }
+
+   
+    
+
+    
+
+
+    
+
+   
+}
+
 
 @import 'mediaqueries.scss';
