@@ -31,19 +31,18 @@ html {
 $firstColor: rgba(218, 37, 53, 1);
 $firstColor-alt: rgba(196, 33, 48, 1);
 $firstColor-send: rgba(222, 59, 73, 1);
-$titleColor: rgba(22, 18, 18, 1);
+$titleColor: rgba(17, 17, 17, 1);
 $textColor: rgba(91, 87, 87, 1);
 $textColor-light: rgba(143, 138, 138, 1);
 $body-color: rgba(254, 251, 251, 1);
 $containerColor: rgba(255, 255, 255, 1);
-$test: rgba(17, 17, 17, 1);
 
 /// FONT TYPO
 $bodyFont: myiphone;
 $biggest-fontSize: 2.8rem;
 $h2-fontSize: 2rem;
 $h3-fontSize: 1.125rem;
-$normal-fontSize: .938rem;
+$normal-fontSize: .878rem;
 $small-fontSize: .813rem;
 
 
@@ -51,20 +50,29 @@ $small-fontSize: .813rem;
 $semibold: 600;
 $bold: 700;
 
-@media screen and (min-width: 968px) {
-    $biggest-fontSize: 3rem;
-    $h2-fontSize: 5rem;
-    $h3-fontSize: 1.25rem;
-    $normal-fontSize: 1rem;
-    $small-fontSize: .875rem;
+// @media screen and (min-width: 968px) {
+//     $biggest-fontSize: 3rem;
+//     $h2-fontSize: 5rem;
+//     $h3-fontSize: 1.2rem;
+//     $normal-fontSize: 1rem;
+//     $small-fontSize: .875rem;
     
-}
+// }
 
 // MARGIN
+
+$mb-1: .3rem;
+$mb-2: .5rem;
+$mb-3: 1rem;
+$mb-4: 1.5rem;
+$mb-5: 2rem;
+$mb-6: 3rem;
+$mb-7: 5rem;
 
 //TITLE
 h1, h2, h3, h4 {
     font-weight: $semibold; 
+    color: $titleColor;
 }
 
 a {
@@ -86,18 +94,20 @@ body {
 .section-title, .section-title-center {
     font-size: $h2-fontSize;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: $mb-4;
 }
 .heading-3 {
-    font-size: 1.2rem;
-    margin: .3rem 0;
+    position: relative;
+    font-size: $h3-fontSize;
+    margin: $mb-1 0;
     width: 100%;
+
+   
 
 }
 
 .heading-4 {
-    font-size: 1rem;
-    margin: 1rem 0 .3rem;
+    margin: $mb-3 0 $mb-1;
 
 }
 
@@ -105,10 +115,8 @@ body {
     max-width: 968px;
     width: calc(100% - 3rem);
     margin: 0 auto;
-    // margin-left: 1.5rem;
-    // margin-right: 1.5rem;
-    
 }
+
 .l-header {
     width: 100%;
     position: fixed;
@@ -125,18 +133,13 @@ body {
 .bd-flex {
     display: flex;
     flex-wrap: wrap;
-    // flex-direction: column;
 }
 
-.bg-container {
-    background-color: $test;
-    color: white;
-    padding-bottom: 7rem;
-}
+
 
 .button {
     display: inline-block;
-    background-color: black;
+    background-color: $titleColor;
     color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 10rem;
@@ -155,16 +158,12 @@ body {
     display: inline-block;
     color: black;
     border-bottom: 2px solid black;
-    margin-top: 1rem;
+    margin-top: $mb-3;
     padding-bottom: 5px;
     font-weight: $semibold;
     transition: .3s;
 
-    &:hover {
-        color: purple;
-    border-bottom: 2px solid purple;
-
-    }
+  
 }
 
 
@@ -176,7 +175,7 @@ body {
     align-items: center;
 
     &__li {
-        margin-bottom: 1.5rem;
+        margin-bottom: $mb-4;
     }
 
     &__link, &__portfolio, &__toggle {
@@ -184,7 +183,7 @@ body {
         font-weight: $semibold;
     }
     &__portfolio {
-        font-size: .613rem;
+        font-size: $small-fontSize;
     }
 
     &__portfolio:hover {
@@ -273,14 +272,14 @@ body {
     justify-content: center;
     align-items: center;
     padding: .3rem;
-    background: rgba(218, 37, 53, .5);
+    background: rgba(1, 1, 1, .5);
     border-radius: .4rem;
     z-index: 100;
     transition: .4s;
     visibility: hidden;
 
     &:hover {
-        background-color: $firstColor;
+        background-color: $titleColor;
     }
 
     &__icon {
@@ -312,7 +311,7 @@ body {
 
     &__year {
         position: relative;
-        font-size: .9rem;
+        font-size: $normal-fontSize;
         color: $textColor;
         padding-left: 1rem;
 
@@ -325,9 +324,6 @@ body {
         }
     }
 
-    &__city {
-        color: #ab5851;
-    }
 
 }
 
@@ -335,38 +331,42 @@ body {
 
 .projet {
 
+    flex-direction: column;
+    align-items: center;
 
+    &__picture {
+        margin-bottom: 2rem;
+    }
 
     &__container {
        
         padding-bottom: 2rem; 
-        margin-top: 1rem;   
+        margin-top: $mb-3;   
     }
 
-    // &__image {
-    //     border-radius: 1rem;
-    // }
+    
 
     &__content {
         max-width: 23rem;
         margin: 0 auto;
-        //  margin: 1rem;
          padding: .95rem .75rem 1.75rem;
          background-color: white;
-        //  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
-         border-radius: 1rem;
 
-        &:hover {
-             box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
-        }
+        
     }
 
     &__category {
         color: $textColor-light;
+
+    }
+
+    &__title {
+        margin: $mb-1 0;
     }
 
     &__text {
-        margin-bottom: 2rem;
+        margin: $mb-1 0 2rem;
+        font-size: $normal-fontSize;
     }
 
     &__link {
@@ -375,9 +375,6 @@ body {
         font-size: 3rem;
         transition: .3s;
 
-        &:hover {
-            color: purple;
-        }
     }
 
     &__button {
@@ -392,12 +389,27 @@ body {
 
 }
 
+
 //competences
+.competences-bg {
+    background : {
+        image: url('/assets/img/mobile/circle.svg');
+        repeat: no-repeat;
+        position: 15rem 40rem;
+    }
+}
 .competences {
+    position: relative;
+
+
     font-weight: 600;
 
     &__card {
         margin-bottom: 2rem;
+    }
+
+    &__description {
+        margin-bottom: $mb-1;
     }
    
     &__year {
@@ -415,7 +427,8 @@ body {
     }
 
     &__li {
-        margin: .5rem 0;
+        margin: $mb-2 0;
+        font-size: .8rem;
     }
 
     
@@ -426,19 +439,18 @@ body {
 .profil {
     text-align: center;
     padding-bottom: initial;
-
-
+    margin-top: $mb-7;
 
     &__img {
         max-width: 7rem;
         margin: 0 auto;
         border-radius: 45%;
-        margin-bottom: 1rem;
+        margin-bottom: $mb-3;
     }
 
     &__job {
         font-size: $biggest-fontSize;
-        margin: 1rem auto;
+        margin: $mb-3 auto;
         line-height: 3rem;
         max-width: 20rem;
 
@@ -458,15 +470,24 @@ body {
     }
 
     &__link {
-        margin-top: 3rem;
-        text-align: center
+        margin-top: $mb-6;
+        text-align: center;
     }
 }
 
 // SERVICES
 .services {
+    position: relative;
     flex-direction: column;
     align-items: center;
+
+    &::after {
+        content: url('/assets/img/mobile/circle.svg') ;
+        position: absolute;
+        top: 54rem;
+        right: 0;
+        z-index: -1;
+    }
 
     &__picture {
         margin-bottom: 2rem;

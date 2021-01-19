@@ -61,37 +61,37 @@ function scrollTop(){
 }
 window.addEventListener('scroll', scrollTop)
 
-/*==================== BUTTONS FILTER ====================*/ 
-const buttons = document.querySelectorAll('.projet__buttons')
-const filterImage = document.querySelectorAll('.projet__content')
+// /*==================== BUTTONS FILTER ====================*/ 
+// const buttons = document.querySelectorAll('.projet__buttons')
+// const filterImage = document.querySelectorAll('.projet__content')
     
-buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const filter = e.target.dataset.filter
-        console.log(filter);
+// buttons.forEach((button) => {
+//     button.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         const filter = e.target.dataset.filter
+//         console.log(filter);
 
-     const active = document.querySelector('.active')
+//      const active = document.querySelector('.active')
 
 
-     if(button.classList.contains('active') == false) {
-         active.classList.remove('active')
-         button.classList.add('active')
-     }
+//      if(button.classList.contains('active') == false) {
+//          active.classList.remove('active')
+//          button.classList.add('active')
+//      }
         
-        filterImage.forEach((item) => {
-            if (filter === 'all') {
+//         filterImage.forEach((item) => {
+//             if (filter === 'all') {
              
-                item.style.display = 'block'
-            } else {
-                if ( item.classList.contains(filter)) {
-                    item.style.display = 'block'
-                } else {
-                    item.style.display = 'none'
-                }
-            }
-        })
+//                 item.style.display = 'block'
+//             } else {
+//                 if ( item.classList.contains(filter)) {
+//                     item.style.display = 'block'
+//                 } else {
+//                     item.style.display = 'none'
+//                 }
+//             }
+//         })
 
-    })
-} )
+//     })
+// } )
     
