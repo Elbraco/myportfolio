@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- BOX ICONS -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/stylesheets/style.css">
@@ -73,8 +74,8 @@
 
             <div class="services__card">
                 <img src="assets/img/mobile/macos-catalina-nouveautes.jpg" alt="">
-                <h3 class="services__card__title heading-3">Responsive Web Design</h3>
-                <p class="services__card__text">Création de site statique ou dynamique avec une base de données (PHP, MySQL)</p>
+                <h3 class="services__card__title heading-3">Sites Dynamiques</h3>
+                <p class="services__card__text">Création de sites statiques ou dynamiques avec une base de données (PHP, MySQL)</p>
 
             </div>
 
@@ -210,7 +211,7 @@
     <section class="projet section bd-container bd-flex" id="projet">
 
         <picture class="projet__picture">
-        <img src="assets/img/mobile/macos2.jpg" alt="" srcset="">
+        <img src="assets/img/mobile/macos22mobile.jpg" alt="" srcset="">
         </picture>
 
         <h2 class="section-title section-title-black">Mes Projets</h2>
@@ -332,28 +333,37 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact section bd-container">
-        <h2 class="section-title">Me Contacter</h2>
-        <div class="contact__container">
-            <form action="action_page.php">
+    <section class="contact section ">
+        <h2 class=" contact__title section-title">Me Contacter</h2>
+        <form class="contact__form" action="action_page.php" autocomplete="off" >
+                <div class="contact__container bd-container bd-flex">
 
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            
-                <input type="submit" value="Envoyer">
+                <div class="contact__group">
+                    <input type="input" class="contact__input" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="contact__label">Prénom</label>
+                  </div>
+
+                  <div class="contact__group">
+                    <input type="input" class="contact__input" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="contact__label">Email</label>
+                  </div>
+
+                  <div class="contact__group">
+                      <textarea class="contact__input contact__textarea" name="" placeholder="Message" id="" cols="0" rows="10"   ></textarea>
+                    <label for="name" class="contact__label">Message</label>
+                  </div>
+
+                  <button type="submit" class="button" >Envoyer <i class='bx bxs-send' ></i></button>
+
+                </div>
             
               </form>
 
-        </div>
 
     </section>
 </main>
-    <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.js"></script>
 </body>
 
 </html>
