@@ -1,19 +1,6 @@
 // MOBILE FIRST
+@import 'fonts.scss';
 @import 'reset.scss';
-@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
-@font-face {
-    font-family: myfonts;
-    src: local(fontsiphone),
-    url(fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
-}
-
-@font-face {
-    font-family: myiphone;
-    src: local(fontsiphone2),
-    url(fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
-}
-
 html {
     box-sizing: border-box;
     // font-size: 62.5%;
@@ -34,8 +21,10 @@ $firstColor-send: rgba(222, 59, 73, 1);
 $titleColor: rgba(17, 17, 17, 1);
 $textColor: rgba(91, 87, 87, 1);
 $textColor-light: rgba(143, 138, 138, 1);
+
 $body-color: rgba(254, 251, 251, 1);
-$containerColor: rgba(255, 255, 255, 1);
+$whiteSmokeColor: rgba(245, 245, 245, 1);
+$blackColor: rgb(24, 24, 24);
 
 /// FONT TYPO
 $bodyFont: myiphone;
@@ -47,20 +36,10 @@ $small-fontSize: .813rem;
 
 
 // FONT WEIGHT
-$semibold: 600;
+$semibold: 500;
 $bold: 700;
 
-// @media screen and (min-width: 968px) {
-//     $biggest-fontSize: 3rem;
-//     $h2-fontSize: 5rem;
-//     $h3-fontSize: 1.2rem;
-//     $normal-fontSize: 1rem;
-//     $small-fontSize: .875rem;
-    
-// }
-
 // MARGIN
-
 $mb-1: .3rem;
 $mb-2: .5rem;
 $mb-3: 1rem;
@@ -71,7 +50,7 @@ $mb-7: 5rem;
 
 //TITLE
 h1, h2, h3, h4 {
-    font-weight: $semibold; 
+    font-weight: $bold; 
     color: $titleColor;
 }
 
@@ -80,8 +59,9 @@ a {
 }
 
 body {
-    font-family: myiphone;
+    font-family: SFProtext;
     font-size: $normal-fontSize;
+    font-weight: $semibold;
     
 }
 
@@ -161,8 +141,8 @@ button {
 
 .link {
     display: inline-block;
-    color: black;
-    border-bottom: 2px solid black;
+    color: $blackColor;
+    border-bottom: 2px solid $blackColor;
     margin-top: $mb-3;
     padding-bottom: 5px;
     font-weight: $semibold;
@@ -265,7 +245,7 @@ button {
 .scroll-header {
     // box-shadow: 0 1px 4px rgba(0, 0, 0, .5 );
     box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);
-    background-color: whitesmoke;
+    background-color: $whiteSmokeColor;
 }
 
 // SCROLL TOP
@@ -299,101 +279,74 @@ button {
     bottom: 1.5rem;
 }
 
+//profil
+.profil {
+    text-align: center;
+    // padding-bottom: initial;
+    margin-top: $mb-7;
 
-//parcours
-
-.parcours {
-
-    transform: translateY(-10px);
-
-    &__box {
-        padding-bottom: 1.5rem;
+    &__img {
+        max-width: 7rem;
+        margin: 0 auto;
+        border-radius: 45%;
+        margin-bottom: $mb-3;
     }
 
-    &__title {
-        font-size: $h3-fontSize;
+    &__job {
+        font-size: $biggest-fontSize;
+        margin: $mb-3 auto;
+        line-height: 3rem;
     }
-
-    &__year {
-        position: relative;
-        font-size: $normal-fontSize;
-        color: $textColor;
-        padding-left: 1rem;
-
-        &::before {
-            content: '• ';
-            position: absolute;
-            font-size: 2rem;
-            top: -14px;
-            left: 0;
-        }
-    }
-
-
-}
-
-//projet
-
-.projet {
-
-    flex-direction: column;
-    align-items: center;
-
-    &__picture {
-        margin-bottom: 2rem;
-    }
-
-    &__container {
-       
-        padding-bottom: 2rem; 
-        margin-top: $mb-3;   
-    }
-
-    
 
     &__content {
-        max-width: 23rem;
         margin: 0 auto;
-         padding: .95rem .75rem 1.75rem;
-         background-color: white;
-
-        
+        line-height: 1.7rem;
     }
 
-    &__category {
-        color: $textColor-light;
-
-    }
-
-    &__title {
-        margin: $mb-1 0;
-    }
-
-    &__text {
-        margin: $mb-1 0 2rem;
-        font-size: $normal-fontSize;
+    &__aboutme {
+        font-weight: $semibold;
+        line-height: 1.7rem;
+        max-width: 19rem;
+        margin: 0 auto;
+        font-size: 1rem;
     }
 
     &__link {
-        color: black;
-        float: right;
-        font-size: 3rem;
-        transition: .3s;
+        margin-top: $mb-6;
+        text-align: center;
+    }
+}
+
+// SERVICES
+.services {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background: {
+        image: url('/assets/img/mobile/circlemobile.svg');
+        repeat: no-repeat;
+        position: 50% 72% 
+    };
+
+   
+
+    // &__picture {
+    //     margin-bottom: 2rem;
+    // }
+
+    &__container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__card {
+        text-align: center;
+        max-width: 18rem;
+        padding: 3rem 0;
 
     }
 
-    &__button {
-        float: right;
-    }
-
 }
-
-.active {
-    background-color: rgb(26, 26, 26);
-    box-shadow: 0 .5rem .5rem rgba(51, 51, 51, .3);
-
-}
-
 
 //competences
 .competences-bg {
@@ -440,76 +393,61 @@ button {
 }
 
 
-//profil
-.profil {
-    text-align: center;
-    padding-bottom: initial;
-    margin-top: $mb-7;
 
-    &__img {
-        max-width: 7rem;
-        margin: 0 auto;
-        border-radius: 45%;
-        margin-bottom: $mb-3;
+//projet
+
+.projet {
+
+    flex-direction: column;
+    align-items: center;
+
+    
+
+    &__container {
+       
+        padding-bottom: 2rem; 
+        margin-top: $mb-3;   
     }
 
-    &__job {
-        font-size: $biggest-fontSize;
-        margin: $mb-3 auto;
-        line-height: 3rem;
-        max-width: 20rem;
-
-    }
+    
 
     &__content {
+        max-width: 23rem;
         margin: 0 auto;
-        line-height: 1.7rem;
+         padding: .95rem .75rem 1.75rem;
+
+        
     }
 
-    &__aboutme {
-        font-weight: 600;
-        line-height: 1.7rem;
-        max-width: 20rem;
-        margin: 0 auto;
-        font-size: 1.2rem;
+    &__category {
+        color: $textColor-light;
+
+    }
+
+    &__title {
+        margin: $mb-1 0;
+    }
+
+    &__text {
+        margin: $mb-1 0 2rem;
+        font-size: $normal-fontSize;
     }
 
     &__link {
-        margin-top: $mb-6;
-        text-align: center;
-    }
-}
+        color: $blackColor;
+        float: right;
+        font-size: 3rem;
+        transition: .3s;
 
-// SERVICES
-.services {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    background: {
-        image: url('/assets/img/mobile/circlemobile.svg');
-        repeat: no-repeat;
-        position: 50% 72% 
-    };
-
-   
-
-    &__picture {
-        margin-bottom: 2rem;
     }
 
-    &__container {
-        align-items: center;
-        flex-direction: column;
-    }
-
-    &__card {
-        text-align: center;
-        max-width: 18rem;
-        padding: 3rem 0;
-
+    &__button {
+        float: right;
     }
 
 }
+
+//Contact
 
 .contact {
     background-color: #222222;
@@ -521,7 +459,7 @@ button {
     }
 
     &__title {
-        color: whitesmoke;
+        color: $whiteSmokeColor;
     }
 
     &__group {
@@ -566,11 +504,11 @@ button {
         display: block;
         transition: 0.2s;
         font-size: 1rem;
-        color:whitesmoke;
+        color:$whiteSmokeColor;
       }
         padding-bottom: 6px;
         border-width: 2px;
-        border-color: whitesmoke;
+        border-color: $whiteSmokeColor;
     }
 
     /* reset input */
@@ -587,16 +525,16 @@ button {
 }
 
 
+//PARTIE TEST
 
+.photo {
+    text-align: center;
 
-
-
-
-
-
-
-
-
-
+    &__none {
+        display: none;
+    }
+}
 
 @import 'mediaqueries.scss';
+
+

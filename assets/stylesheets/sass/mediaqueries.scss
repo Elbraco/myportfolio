@@ -78,7 +78,16 @@
 // DESKTOP
 
 @media screen and (min-width: 968px) {
+
+    $biggest-fontSize: 3rem;
+     $h2-fontSize: 5rem;
+     $h3-fontSize: 1.2rem;
+     $normal-fontSize: 1rem;
+     $small-fontSize: .875rem;
   
+  body {
+      background-color: red;
+  }
   
     .bd-container {
         margin-left: auto;
@@ -106,7 +115,15 @@
 
     
 
-    
+    .photo {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__none {
+            display: block;
+        }
+    }
     
    
     
