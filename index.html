@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
                         <li class="nav__li"><a href="#services" class="nav__link">Mes Services</a></li>
                         <li class="nav__li"><a href="#competences" class="nav__link">Mes Compéténces</a></li>
                         <li class="nav__li"><a href="#projet" class="nav__link">Projets</a> </li>
-                        <li class="nav__li"><a class="nav__link">Contact</a></li>
+                        <li class="nav__li"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
                 <div class="nav__toggle" id="nav-toggle">
@@ -52,31 +52,23 @@
                 <a href="#" class="button"> Télécharger CV </a>
             </div>
         </section>
-        <section class=" section photo" >
 
-            <div>
-                <img class="services__img photo__none" src="assets/img/mobile/macos1.jpg" alt="Mac os" >
-                <img class="services__img photo__none" src="assets/img/mobile/macos1.jpg" alt="Mac os" >
-            </div>
-                <img class="services__img" src="assets/img/mobile/macos1.jpg" alt="Mac os" >
+        <div class="picture">
 
-                <div>
-                    <img class="services__img photo__none" src="assets/img/mobile/macos1.jpg" alt="Mac os" >
-                    <img class="services__img photo__none" src="assets/img/mobile/macos1.jpg" alt="Mac os" >
-                </div>
-        </section>
+        <picture>
+            <source media="(min-width: 968px)" srcset="assets/img/macos1.jpg">
+
+        <img class="services__img" src="assets/img/mobile/macos1.jpg" alt="Mac os" >
+    </picture>
+</div>
 
         <!-- SERVICES -->
-        <section class="services section bd-container bd-flex" id="services">
-           
+        <section class="services section bd-container" id="services">
+            
+
             <h2 class="section-title services__title">Mes Services</h2>
             <div class="services__container bd-flex">
-                <div class="services__card">
-                    <img src="assets/img/mobile/iphone2.jpg" alt="iPhone">
-                    <h3 class="services__card__title heading-3">Responsive Web Design</h3>
-                    <p class="services__card__text">Construction d'un site web qui s'adapte à tout type d'écran y compris mobile, grâce aux HTML, CSS, JavaScript</p>
-                </div>
-
+               
                 <div class="services__card">
                     <img src="assets/img/mobile/macos-catalina-nouveautes.jpg" alt="mac os">
                     <h3 class="services__card__title heading-3">Sites Dynamiques</h3>
@@ -84,7 +76,14 @@
                 </div>
 
                 <div class="services__card">
-                    <img src="assets/img/mobile/macos-catalina-nouveautes.jpg" alt="mac os">
+                    <img src="assets/img/mobile/iphone2-removebg.png" alt="iPhone">
+                    <h3 class="services__card__title heading-3">Responsive Web Design</h3>
+                    <p class="services__card__text">Construction d'un site web qui s'adapte à tout type d'écran y compris mobile, grâce aux HTML, CSS, JavaScript</p>
+                </div>
+
+
+                <div class="services__card">
+                    <img src="assets/img/mobile/macos-catalina-nouveautes-removebg.png" alt="mac os">
                     <h3 class="services__card__title heading-3">Responsive Web Design</h3>
                     <p class="services__card__text">Création de site statique ou dynamique avec une base de données (PHP, MySQL)</p>
                 </div>
@@ -117,7 +116,7 @@
                         </div>
                     </div>
 
-                    <div class="competences__card">
+                    <div class="competences__focard">
                         <h3 class="heading-3">Diplome</h3>
 
                         <div>
@@ -134,6 +133,8 @@
                             <p class="competences__year">2008</p>
                         </div>
                     </div>
+                </div>
+
 
 
                     <div class="competences__container-atouts bd-flex">
@@ -203,16 +204,20 @@
                             </ul>
                         </div>
                     </div>
-                </div>
             </section>
         </div>
 
-        <section class="section photo">
-            <img src="assets/img/mobile/laptop-black-mobile.jpg" alt="mac os" >
-        </section>
+        <div class="picture picture-bg">
+            <picture>
+            <source media="(min-width: 968px)" srcset="assets/img/laptop-black.jpg">
+        <img src="assets/img/mobile/laptop-black-mobile.jpg" alt="mac os" >
+    </picture>
+    </div>
+
 
         <!-- PROJETS -->
-        <section class="projet section bd-container bd-flex" id="projet">
+        <section class="projet section bd-container" id="projet">
+        
 
             <h2 class="section-title section-title-black">Mes Projets</h2>
 
@@ -296,44 +301,9 @@
                     </div>
                 </div>
 
-                <div class="projet__content">
-                    <img class="projet__image" src="assets/img/cookie.jpg" alt="projet image">
-                    <div class="projet__info">
-                        <h3 class="projet__title">Cookie</h3>
-                        <span class="projet__category">Html Css Js</span>
-                        <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
-                            magnam deserunt natus possimus perspiciatis architecto.</p>
-                        <a href="https://cookie-app.vercel.app/" target="_blank" class="link">Visiter le site</a>
-                        <a href="https://github.com/Elbraco/cookie" target="_blank" class="projet__link"> <i
-                                class='bx bxl-github'></i></a>
-                    </div>
-                </div>
+                
 
-                <div class="projet__content">
-                    <img class="projet__image" src="assets/img/cookie.jpg" alt="projet image">
-                    <div class="projet__info">
-                        <h3 class="projet__title">Cookie</h3>
-                        <span class="projet__category">Html Css Js</span>
-                        <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
-                            magnam deserunt natus possimus perspiciatis architecto.</p>
-                        <a href="https://cookie-app.vercel.app/" target="_blank" class="link">Visiter le site</a>
-                        <a href="https://github.com/Elbraco/cookie" target="_blank" class="projet__link"> <i
-                                class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-
-                <div class="projet__content">
-                    <img class="projet__image" src="assets/img/cookie.jpg" alt="projet image">
-                    <div class="projet__info">
-                        <h3 class="projet__title">Cookie</h3>
-                        <span class="projet__category">Html Css Js</span>
-                        <p class="projet__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique,
-                            magnam deserunt natus possimus perspiciatis architecto.</p>
-                        <a href="https://cookie-app.vercel.app/" target="_blank" class="link">Visiter le site</a>
-                        <a href="https://github.com/Elbraco/cookie" target="_blank" class="projet__link"> <i
-                                class='bx bxl-github'></i></a>
-                    </div>
-                </div>
+            
 
             </div>
             <a href="#" class=" projet__button button">Voir autres projets</a>
@@ -341,7 +311,7 @@
         </section>
 
         <!-- CONTACT -->
-        <section class="contact section ">
+        <section class="contact section" id="contact">
             <h2 class=" contact__title section-title">Me Contacter</h2>
             <form class="contact__form" action="action_page.php" autocomplete="off">
                 <div class="contact__container bd-container bd-flex">
@@ -369,6 +339,3 @@
     </main>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery.js"></script>
-</body>
-
-</html>

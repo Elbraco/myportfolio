@@ -124,11 +124,11 @@ button {
 
 .button {
     display: inline-block;
-    background-color: $titleColor;
-    color: #fff;
+    background-color: rgba(241, 196, 15, 1);
+    color: $blackColor;
     padding: 1rem 1.5rem;
     border-radius: 10rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: .3s;
     letter-spacing: 0.1rem;
 
@@ -148,7 +148,17 @@ button {
     font-weight: $semibold;
     transition: .3s;
 
-  
+}
+
+.picture {
+    text-align: center;
+    padding: 3rem;
+
+}
+.picture-bg {
+    background: rgb(227 227 227);
+
+
 }
 
 
@@ -165,7 +175,7 @@ button {
 
     &__link, &__portfolio, &__toggle {
         color: $titleColor;
-        font-weight: $semibold;
+        font-weight: $bold;
     }
     &__portfolio {
         font-size: $small-fontSize;
@@ -330,9 +340,9 @@ button {
 
    
 
-    // &__picture {
-    //     margin-bottom: 2rem;
-    // }
+    //  &__picture {
+    //      margin-bottom: 4rem;
+    //  }
 
     &__container {
         align-items: center;
@@ -400,6 +410,10 @@ button {
 
     flex-direction: column;
     align-items: center;
+
+    &__picture {
+        margin-bottom: 4rem;
+    }
 
     
 
@@ -527,13 +541,7 @@ button {
 
 //PARTIE TEST
 
-.photo {
-    text-align: center;
 
-    &__none {
-        display: none;
-    }
-}
 
 @import 'mediaqueries.scss';
 
