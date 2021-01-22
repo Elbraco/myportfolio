@@ -94,4 +94,22 @@ window.addEventListener('scroll', scrollTop)
 
 //     })
 // } )
+
+//SCROLL REVEAL ANIMATION
+
+const sr = ScrollReveal({
+    distance: '30px',
+    duration: 5000,
+    reset: false,
+});
+
+sr.reveal(`.services__container, .profil`, {
+    origin: 'top',
+    interval: 200,
+});
+
+sr.reveal(`.competences`, {
+    origin: 'left'
+})
+
     
